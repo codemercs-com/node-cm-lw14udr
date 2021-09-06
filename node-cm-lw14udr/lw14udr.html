@@ -1,0 +1,227 @@
+<!-- SEND DALI DACP VALUE (0...254 direct output) -->
+<script type="text/html" data-template-name="dacp">
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_type"><i class="fa fa-tag"></i> Type</label>
+        <select id="node-input-dali_type" class="dacp-dali_type" style="width:125px !important" required>
+                  <option selected value="0">Broadcast</option>
+                  <option value="1">Group</option>
+                  <option value="2">Single/Short</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_adr"><i class="fa fa-empire"></i> Device adr.</label>
+        <input type="number" id="node-input-dali_adr" class="dacp-dali_adr" placeholder="[msg.dali_adr]" style="width:100px;" min=0 max=63> (0...63)
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_value"><i class="fa fa-empire"></i> Value</label>
+        <input type="number" id="node-input-dali_value" class="dacp-dali_value" placeholder="[msg.dali_value]" style="width:100px;" min=0 max=255> (0...254)
+    </div>
+
+</script>
+ 
+<script type="text/html" data-help-name="dacp">
+    <p>Send a output value to single/group/broadcast.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('dacp', 
+    {
+        category: 'LW14UDR',
+        defaults: 
+        {
+            name: {value:""},
+            dali_type: {value:"0", required:true},
+            dali_adr: {value:"0", required:true},
+            dali_value: {value:"0", required:true},
+        },
+        color:"#94C1D0",
+        inputs:1,
+        outputs:1,
+        icon: "sign-out.png", //https://fontawesome.com/v4.7/icons/
+        align: "right",
+        label: function() { return this.name||'Send DACP'; },
+        labelStyle: function() { return this.name?"node_label_italic":"";},
+        oneditprepare: function() {},
+        oneditsave: function() {},
+        oneditcancel : function() {},
+        oneditdelete : function() {},
+        oneditresize : function() {}
+    });
+</script>
+
+
+<!-- SEND DALI COMMAND VALUE (MIN, MAX, etc.) -->
+<script type="text/html" data-template-name="command">
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_type"><i class="fa fa-tag"></i> Type</label>
+        <select id="node-input-dali_type" class="cmd-dali_type" style="width:125px !important" required>
+                  <option selected value="0">Broadcast</option>
+                  <option value="1">Group</option>
+                  <option value="2">Single/Short</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_adr"><i class="fa fa-empire"></i> Device adr.</label>
+        <input type="number" id="node-input-dali_adr" class="cmd-dali_adr" placeholder="[msg.dali_adr]" style="width:100px;" min=0 max=63> (0...63)
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_value"><i class="fa fa-empire"></i> Value</label>
+        <input type="number" id="node-input-dali_value" class="cmd-dali_value" placeholder="[msg.dali_value]" style="width:100px;" min=0 max=255> (0...254)
+    </div>
+
+</script>
+ 
+<script type="text/html" data-help-name="command">
+    <p>Send a command to single/group/broadcast.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('command', 
+    {
+        category: 'LW14UDR',
+        defaults: 
+        {
+            name: {value:""},
+            dali_type: {value:"0", required:true},
+            dali_adr: {value:"0", required:true},
+            dali_value: {value:"0", required:true},
+        },
+        color:"#94C1D0",
+        inputs:1,
+        outputs:1,
+        icon: "sign-out.png", //https://fontawesome.com/v4.7/icons/
+        align: "right",
+        label: function() { return this.name||'Send COMMAND'; },
+        labelStyle: function() { return this.name?"node_label_italic":"";},
+        oneditprepare: function() {},
+        oneditsave: function() {},
+        oneditcancel : function() {},
+        oneditdelete : function() {},
+        oneditresize : function() {}
+    });
+</script>
+
+
+<!-- GET QUERY VALUE FROM SINGLE DEVICE -->
+<script type="text/html" data-template-name="query">
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_adr"><i class="fa fa-empire"></i> Device adr.</label>
+        <input type="number" id="node-input-dali_adr" class="query-dali_adr" placeholder="[msg.dali_adr]" style="width:100px;" min=0 max=63> (0...63)
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_value"><i class="fa fa-empire"></i> Value</label>
+        <input type="number" id="node-input-dali_value" class="query-dali_value" placeholder="[msg.dali_value]" style="width:100px;" min=0 max=255> (0...254)
+    </div>
+
+</script>
+ 
+<script type="text/html" data-help-name="dacp">
+    <p>Get the query value of a single device.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('query', 
+    {
+        category: 'LW14UDR',
+        defaults: 
+        {
+            name: {value:""},
+            dali_adr: {value:"0", required:true},
+            dali_value: {value:"0", required:true},
+        },
+        color:"#94C1D0",
+        inputs:1,
+        outputs:1,
+        icon: "sign-out.png", //https://fontawesome.com/v4.7/icons/
+        align: "left",
+        label: function() { return this.name||'Get QUERY'; },
+        labelStyle: function() { return this.name?"node_label_italic":"";},
+        oneditprepare: function() {},
+        oneditsave: function() {},
+        oneditcancel : function() {},
+        oneditdelete : function() {},
+        oneditresize : function() {}
+    });
+</script>
+
+<!-- GET QUERY VALUE FROM SINGLE DEVICE -->
+<script type="text/html" data-template-name="scene">
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_type"><i class="fa fa-tag"></i> Type</label>
+        <select id="node-input-dali_type" class="scene-dali_type" style="width:125px !important" required>
+                  <option selected value="0">Broadcast</option>
+                  <option value="1">Group</option>
+                  <option value="2">Single/Short</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_adr"><i class="fa fa-empire"></i> Device adr.</label>
+        <input type="number" id="node-input-dali_adr" class="scene-dali_adr" placeholder="[msg.dali_adr]" style="width:100px;" min=0 max=63> (0...63)
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dali_value"><i class="fa fa-empire"></i> Scene</label>
+        <input type="number" id="node-input-dali_value" class="scene-dali_value" placeholder="[msg.dali_value]" style="width:100px;" min=0 max=15> (0...15)
+    </div>
+
+</script>
+ 
+<script type="text/html" data-help-name="scene">
+    <p>Call a specific scene.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('scene', 
+    {
+        category: 'LW14UDR',
+        defaults: 
+        {
+            name: {value:""},
+            dali_type: {value:"0", required:true},
+            dali_adr: {value:"0", required:true},
+            dali_value: {value:"0", required:true},
+        },
+        color:"#94C1D0",
+        inputs:1,
+        outputs:1,
+        icon: "sign-out.png", //https://fontawesome.com/v4.7/icons/
+        align: "right",
+        label: function() { return this.name||'Call SCENE'; },
+        labelStyle: function() { return this.name?"node_label_italic":"";},
+        oneditprepare: function() {},
+        oneditsave: function() {},
+        oneditcancel : function() {},
+        oneditdelete : function() {},
+        oneditresize : function() {}
+    });
+</script>
