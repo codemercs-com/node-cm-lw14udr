@@ -26,12 +26,12 @@ The nodes have the following values:
 ------------
 
 
-#####Node: dacp
+##### Node: dacp
 Send a DACP (direct light output) value to a device/group/broadcast. The value 0..254 based on the output of the device (linear or logarithmic). For more information about the steps please take a look into the data sheet of your device.
 
 ------------
 
-#####Node: command
+##### Node: command
 Send a COMMAND value to a device/group/broadcast. The basic commands are:
 
 OFF = 0x00 (0)        -> Set the output to 0
@@ -46,7 +46,7 @@ ON_STEP_UP = 0x08 (8)       -> Single step up if off
 
 ------------
 
-#####Node: query
+##### Node: query
 Get a value from specific devices. Groups or broadcast are not allowed/possible.
 This function will get information about the devices like 'actual level' or status.
 Most used value are:
@@ -58,7 +58,7 @@ There are many more QUERY commands, for more information please take a look into
 
 ------------
 
-#####Node: scene
+##### Node: scene
 Call a scene for a device/group/broadcast. All addressed devices will show the scene value directly.
 Each DALI(*) device allows storing up to 16 scene values to create scenes for your light environment. Value: 0..15 are valid
 
