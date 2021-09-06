@@ -34,15 +34,15 @@ Send a DACP (direct light output) value to a device/group/broadcast. The value 0
 ##### Node: command
 Send a COMMAND value to a device/group/broadcast. The basic commands are:
 
-OFF = 0x00 (0)        -> Set the output to 0
-UP = 0x01 (1)       -> Dimm up to the next step.
-DOWN = 0x02 (2)       -> Dimm down to the previous step.
-STEP_UP = 0x03 (3)       -> Single step up to the next value (x = x+1)
-STEP_DOWN = 0x04 (4)       -> Single step down to the next value (x = x-1)
-MAX = 0x05 (5)       -> Call the max output
-MIN = 0x06 (6)       -> Call the min output
-STEP_DOWN_OFF = 0x07 (7)       -> Single step down, if last step will be 0 set it off
-ON_STEP_UP = 0x08 (8)       -> Single step up if off
+- OFF = 0x00 (0)        -> Set the output to 0
+- UP = 0x01 (1)       -> Dimm up to the next step.
+- DOWN = 0x02 (2)       -> Dimm down to the previous step.
+- STEP_UP = 0x03 (3)       -> Single step up to the next value (x = x+1)
+- STEP_DOWN = 0x04 (4)       -> Single step down to the next value (x = x-1)
+- MAX = 0x05 (5)       -> Call the max output
+- MIN = 0x06 (6)       -> Call the min output
+- STEP_DOWN_OFF = 0x07 (7)       -> Single step down, if last step will be 0 set it off
+- ON_STEP_UP = 0x08 (8)       -> Single step up if off
 
 ------------
 
@@ -51,8 +51,8 @@ Get a value from specific devices. Groups or broadcast are not allowed/possible.
 This function will get information about the devices like 'actual level' or status.
 Most used value are:
 
-QUERY_STATUS = 0x90 (144)      -> Get the status (1 Byte). Each bit represent a status.
-QUERY_ACTUAL_LEVEL = 0xA0 (160)      -> Get the actual output value (0..254)
+- QUERY_STATUS = 0x90 (144)      -> Get the status (1 Byte). Each bit represent a status.
+- QUERY_ACTUAL_LEVEL = 0xA0 (160)      -> Get the actual output value (0..254)
 
 There are many more QUERY commands, for more information please take a look into the DIN IEC62386 standard.
 
