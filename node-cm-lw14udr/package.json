@@ -1,5 +1,5 @@
 {
-    "name": "codemercs-lw14udr",
+    "name": "node-cm-lw14udr",
     "version": "0.0.1",
     "description": "Node for LED-Warrrio14U-DR from Codemercs",
     "dependencies": {
