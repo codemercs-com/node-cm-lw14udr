@@ -9,7 +9,7 @@ Copy the folder 'node-cm-lw14udr' into ~./node-red/node_modules and start/restar
 
 
 ### Permissions
-You have grand permissions for using the USB interface for the LED-Warrior14U-DR.
+You have to grant permissions for using the USB interface for the LED-Warrior14U-DR.
 Copy the 99-iowarrior.rules file into '/etc/udev/rules.d' or '/lib/udev/rules.d/' and
 reload the rules by using 'udevadm control --reload-rules && udevadm trigger' or replug the 
 LED-Warrior14U-DR.
