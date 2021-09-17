@@ -79,10 +79,10 @@ For more information about IEC62386 bus: https://www.dali-alliance.org/
 
 
 ### Links and further information
-https://codemercs.com/en/light-interface/master
-https://codemercs.com/en/light-interface/basics
-https://codemercs.com/en/light-interface/busmaster-software (Windows software for LW14U-DR)
-https://de.wikipedia.org/wiki/Digital_Addressable_Lighting_Interface
+- https://codemercs.com/en/light-interface/master
+- https://codemercs.com/en/light-interface/basics
+- https://codemercs.com/en/light-interface/busmaster-software (Windows software for LW14U-DR)
+- https://de.wikipedia.org/wiki/Digital_Addressable_Lighting_Interface
 
 ------------
 
