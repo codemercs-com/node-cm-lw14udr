@@ -29,9 +29,7 @@ The nodes have the following values:
 ##### Node: dacp
 Send a DACP (direct light output) value to a device/group/broadcast. The value 0..254 based on the output of the device (linear or logarithmic). For more information about the steps please take a look into the data sheet of your device.
 
-Table for logarithmic DACP ouput.
-N = DACP value
-%X = Light output
+Table for logarithmic DACP ouput. N = DACP value, %X = Light output
 
 | N | X% | N | X% | N | X% | N | X% | N | X% |
 |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  |  ------------  | 
