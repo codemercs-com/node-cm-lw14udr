@@ -1,5 +1,7 @@
 This set of node-red nodes communicate with the LED-Warrior14U-DR on a Raspberry PI.
 
+# This node is obsolete and should not used further. Please use the node-red component [node-cm-lw14udr-hid](https://github.com/codemercs-com/node-cm-lw14udr-hid) instead which supports multiple LED-Warrior14UDR at the same time.
+
 ------------
 
 ### Install NODE
